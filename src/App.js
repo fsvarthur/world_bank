@@ -1,10 +1,14 @@
 import './App.css';
-import { ListCountries } from './components/ListCountries';
+import Header from './components/Header';
+import ListCountries from './components/ListCountries/ListCountries';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <>
+      <Header/>
       <ListCountries/>
+      <Footer/>
     </>
   );
 }
