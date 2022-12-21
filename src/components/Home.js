@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 export default function Home() {
     return (
         <div>
-            <Link to="/countries">Countries</Link>
+            <Outlet/>
         </div>
     );
 }

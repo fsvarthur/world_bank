@@ -11,7 +11,12 @@ export default function Header(){
 function Head(){
     return (
         <div>
-            <h1>Header</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/countries">Countries</a></li>
+                </ul>
+            </nav>
         </div>
     );
 }
