@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
-
+import { useLoaderData } from "react-router-dom";
+import { getCountry } from "../../util/req";
 
 
 const CountryDetail = (props) =>{
-    const params = useParams();
+    const params = useLoaderData();
     console.log(params.id);
 
     return (
@@ -15,3 +15,8 @@ const CountryDetail = (props) =>{
 }
 
 export default CountryDetail;
+
+export function countryDetailLoader({params}){
+    const countryId = params.id;
+    return getCountry(countryId);
+}
