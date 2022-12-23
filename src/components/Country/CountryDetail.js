@@ -3,13 +3,13 @@ import { getCountry } from "../../util/req";
 
 
 const CountryDetail = (props) =>{
-    const params = useLoaderData();
-    console.log(params.id);
+    const {params} = useLoaderData();
+    console.log(params);
 
     return (
         <div>
             <h1>Country Detail</h1>
-            <h2>{params.name}</h2>
+            <h2>{params.id}</h2>
         </div>
     )
 }

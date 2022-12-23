@@ -1,0 +1,39 @@
+
+#error-page{
+    background: #fff;
+    color: #000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 2em auto;
+    max-width: 700px;
+    padding: 1em 2em;
+}
+
+#error-page h1{
+    border-bottom: 1px solid #dadada;
+    clear: both;
+    color: #666;
+    font-size: 24px;
+    margin: 30px 0 0 0;
+    padding: 0;
+    padding-bottom: 7px;
+}
+
+#error-page div{
+    margin-top: 10px;
+    padding: 0;
+}
+
+#error-page code{
+    font-family: Consolas, Monaco, monospace;
+}
+
+#error-page a{
+    color: #21759B;
+    text-decoration: none;
+}
+
+#error-page a:hover{
+    color: #D54E21;
+}

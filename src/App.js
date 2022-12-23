@@ -5,23 +5,25 @@ import Home from './components/Home';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import CountryDetail, { countryDetailLoader } from './components/Country/CountryDetail';
 import ListCountries, {listCountriesLoader} from './components/ListCountries/ListCountries';
+import ErrorPage from './errors/error-page';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home/>,
+    errorElement: <ErrorPage/>
   },{
     path: '/countries',
     element: <ListCountries/>,
     loader: listCountriesLoader,
-    children: [
-      {
-        path: '/countries/:id',
-        element: <CountryDetail/>,
-        loader: countryDetailLoader,
-      }
-    ]
+    errorElement: <ErrorPage/>
   },
+  {
+    path: '/countries/:id',
+    element: <CountryDetail/>,
+    loader: countryDetailLoader,
+    errorElement: <ErrorPage/>
+  }
 ]);
 
 
