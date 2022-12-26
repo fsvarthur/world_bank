@@ -6,7 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 
 
 export default function ListCountries(){
-    const {listC} = useLoaderData(); 
+    const listC = useLoaderData(); 
 
     return (
         <div >

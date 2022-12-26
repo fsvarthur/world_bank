@@ -1,20 +1,20 @@
+
 import { useLoaderData } from "react-router-dom";
 import { getCountry } from "../../util/req";
+import Country from "../Country/Country";
 
 
-const CountryDetail = (props) =>{
-    const {params} = useLoaderData();
-    console.log(params);
+export default function CountryDetail () {
+    const countryData = useLoaderData();
 
     return (
-        <div>
+        <div className="countryDetail">
             <h1>Country Detail</h1>
-            <h2>{params.id}</h2>
+            {countryData[1].map((country) => <Country key={country.id} country={country}/>)}
         </div>
     )
 }
 
-export default CountryDetail;
 
 export function countryDetailLoader({params}){
     const countryId = params.id;

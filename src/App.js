@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import CountryDetail, { countryDetailLoader } from './components/Country/CountryDetail';
+import CountryDetail, { countryDetailLoader } from './components/CountryDetail/CountryDetail';
 import ListCountries, {listCountriesLoader} from './components/ListCountries/ListCountries';
 import ErrorPage from './errors/error-page';
 
