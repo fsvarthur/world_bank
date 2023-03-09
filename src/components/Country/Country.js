@@ -2,9 +2,6 @@ import React from "react";
 import './Country.css';
 
 export default function Country(props) {
-    console.log(props)
-
-
     return (
         <>
             <p>City name: {props.country.name}</p>

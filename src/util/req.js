@@ -1,5 +1,6 @@
-export async function getCountries(){
-    const respone = await fetch("https://api.worldbank.org/v2/country?format=json&per_page=299",
+export async function getCountries(context = 1){
+    getMetadata();
+    const respone = await fetch(`https://api.worldbank.org/v2/country?format=json&page=1`,
     {
         method: 'GET',
         headers:{
@@ -12,6 +13,22 @@ export async function getCountries(){
         throw new Error('Error');
     }
     return respone.json();
+}
+
+async function getMetadata(){
+    const response = await fetch("https://api.worldbank.org/v2/country?format=json",
+    {
+        method: 'GET',
+        headers:{
+            'Accept':'Application/json',
+        },
+        mode: 'cors',
+        cache: 'default'
+    });
+    if(!response.ok){
+        throw new Error('Error');
+    }
+    console.log(response.json().length());
 }
 
 export async function getCountry(id){

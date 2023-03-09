@@ -1,4 +1,5 @@
 li{
-    list-style: none;
-
+    padding: 16;
+    text-align: center;
+    color: coral;
 }

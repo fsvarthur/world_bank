@@ -1,8 +1,12 @@
-.divButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main div{
+    background-color: bisque;
     margin: 10px;
+    width: max-content;
 }
 
-
+.main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
